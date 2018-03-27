@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ContosoUniversity.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Enrollment Date &nbsp;&nbsp;&nbsp;
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>
+<br/><br/>
+<h2>Contact Info:</h2>
+Mike Summers, Dean<br/>
+<a href="mailto:mike@contosou.edu">mike@contosou.edu</a><br/>
+1-800-569-8854
